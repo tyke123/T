@@ -21,11 +21,36 @@ body {
     align-items: center;
     max-width: 370px;
     width: 100%;
-    background: #f1c8fc;
+    background: #ffd4f2;
     border-radius: 24px;
     padding: 25px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     position: relative;
+    
+    background: rgba(255, 255, 255, 0.2); /* Màu trắng trong suốt */
+    backdrop-filter: blur(15px); /* Hiệu ứng làm mờ */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Bóng mờ nhẹ */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Viền trong suốt */
+    border-radius: 20px; /* Bo góc mềm mại */
+    padding: 20px; /* Khoảng cách bên trong */
+    width: 300px; /* Chiều rộng của card */
+    text-align: center; /* Canh giữa nội dung */
+    margin: auto; /* Giữ card ở giữa */
+
+    background: rgba(255, 255, 255, 0.2); /* Màu nền trong suốt */
+    backdrop-filter: blur(15px); /* Hiệu ứng làm mờ */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Bóng mờ nhẹ */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Viền */
+    border-radius: 20px; /* Bo góc */
+    padding: 40px; /* Khoảng cách nội dung */
+    width: 400px; /* Tăng chiều rộng card */
+    height: auto; /* Để chiều cao tự động */
+    text-align: center; /* Canh giữa nội dung */
+    margin: auto; /* Giữ card ở giữa */
+
+    position: relative; /* Giúp ::before được định vị tương đối với card */
+    overflow: hidden; /* Đảm bảo các phần tử không tràn ra ngoài card */
+    border-radius: 24px; /* Đảm bảo bo góc tổng thể của card */
 }
 .profile-card::before {
     content: '';
@@ -35,7 +60,19 @@ body {
     height: 36%;
     width: 100%;
     border-radius: 24px 24px 0 0;
-    background-color: #fdbcef;
+    background-color: #f38ff7;
+
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 36%; /* Độ cao của phần màu hồng */
+    width: 100%;
+    border-radius: 24px 24px 0 0; /* Bo góc phía trên */
+    background-color: rgba(243, 143, 247, 0.5); /* Màu hồng với độ trong suốt */
+    backdrop-filter: blur(10px); /* Hiệu ứng làm mờ */
+    -webkit-backdrop-filter: blur(10px); /* Hỗ trợ cho trình duyệt WebKit */
+    z-index: -1; /* Đẩy phần này xuống dưới nội dung của card */
 }
 .image {
     position: relative;
@@ -98,12 +135,25 @@ body {
     border-radius: 24px;
     margin: 0 10px;
     padding: 8px 24px;
-    background-color: #4070f4;
+    background-color: #ff5bf7;
     cursor: pointer;
     transition: all 0.3s ease;
+
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    border: none;
+    border-radius: 24px;
+    margin: 0 10px;
+    padding: 8px 24px;
+    background-color: rgba(255, 91, 247, 0.7); /* Màu hồng với độ trong suốt */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px); /* Hiệu ứng làm mờ */
+    box-shadow: 0 4px 10px rgba(255, 91, 247, 0.5); /* Tạo hiệu ứng nổi bật */
 }
 .buttons .button:hover {
-    background-color: #0e4bf1;
+    background-color: #b734e2;
 }
 .profile-card .analytics {
     display: flex;
